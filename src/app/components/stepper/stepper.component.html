@@ -1,0 +1,30 @@
+<div class="flex items-center justify-between w-full p-4 bg-white">
+  <div class="flex-1 flex items-center justify-between">
+    <div class="flex items-center justify-center flex-col relative" [class.completed]="step >= 1">
+      <div [ngClass]="{
+            'w-10 h-10 rounded-full flex items-center justify-center  font-extrabold font-serif text-lg transition-colors ease-in-out': true,
+            'bg-sky-600 text-slate-50': step === 1,
+            'bg-slate-50 text-slate-900': step !== 1
+          }">1</div>
+      <div class="mt-2 text-sm font-extrabold font-serif">User Info</div>
+    </div>
+    <div class="flex-1 h-px bg-gray-300 mx-2" [class.bg-orange-500]="step >= 2"></div>
+    <div class="flex items-center justify-center flex-col relative" [class.completed]="step >= 2">
+      <div [ngClass]="{
+            'w-10 h-10 rounded-full flex items-center justify-center font-extrabold font-serif text-lg transition-colors ease-in-out': true,
+            'bg-sky-600 text-slate-50': step === 2,
+            'bg-slate-50 text-slate-900': step !== 2
+          }">2</div>
+      <div class="mt-2 text-sm font-extrabold font-serif">Address</div>
+    </div>
+    <div class="flex-1 h-px bg-gray-300 mx-2" [class.bg-orange-500]="step >= 3"></div>
+    <div class="flex items-center justify-center flex-col relative" [class.completed]="step >= 3">
+      <div [ngClass]="{
+            'w-10 h-10 rounded-full flex items-center justify-center text-slate-50 font-extrabold font-serif text-lg transition-colors ease-in-out': true,
+            'bg-sky-600 text-slate-50': step === 3,
+            'bg-slate-50 text-slate-900': step !== 3
+          }">3</div>
+      <div class="mt-2 text-sm font-extrabold font-serif">Confirm</div>
+    </div>
+  </div>
+</div>

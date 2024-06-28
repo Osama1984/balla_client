@@ -1,0 +1,18 @@
+<div class="min-w-96 min-h-96  flex flex-col justify-between items-center bg-white">
+  <div class="min-w-16 min-h-11">
+      <app-stepper [step]="step"></app-stepper>
+  </div>
+  <ng-container *ngIf="step===1">
+    <div class="flex-1 items-center justify-center flex flex-col">
+      <app-user-info-form (changeStep)="changeStep($event)" [step]="step"></app-user-info-form>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="step===2">
+    <app-user-address-form (changeStep)="changeStep($event)" [step]="step"></app-user-address-form>
+  </ng-container>
+
+  <ng-container *ngIf="step===3">
+    <app-user-confirm-form></app-user-confirm-form>
+  </ng-container>
+

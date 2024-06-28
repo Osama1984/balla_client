@@ -1,0 +1,10 @@
+<div>
+  <h2>Confirm User</h2>
+  <form (ngSubmit)="verifyUser()">
+    <div>
+      <label for="verificationCode">Verification Code:</label>
+      <input type="text" id="verificationCode" name="verificationCode" [(ngModel)]="verificationCode" required>
+    </div>
+    <button type="submit">Verify</button>
+  </form>
+</div>
